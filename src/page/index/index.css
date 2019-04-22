@@ -1,4 +1,258 @@
-body{
-  background: #ccc;
-  background-image: url(../../assets/images/test.jpg)
+html,body{
+  height:100%;
+  width: 100%;
+  min-width: 1080px;
+  min-height: 800px;
+  font-size: 14px;
+}
+/* 分割线 */
+.dividing-line{
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+.dividing-line div{
+  flex-grow: 1;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #efefef;
+  opacity: 0.8;
+}
+.dividing-line div:last-child{
+  width: 40%;
+  border-right: none;
+}
+/* 盒子 */
+.content-wrapper{
+  width: 100%;
+  height: 100%;
+}
+.content-item{
+  height: 50%;
+  width: 100%;
+  float: left;
+}
+/* 菜单栏 */
+.menu{
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+.menu .item{
+  width: 20%;
+  height: 60px; 
+  float: left;
+}
+.link{
+  float: right !important;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+}
+.link a {
+  color: #fff;
+}
+.logo{
+  height: 60px; 
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+}
+.menu-button {
+  display: inline-block;
+  width: 100%;
+  height: 60px; 
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+}
+.menu-button:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* 展示图 */
+.header{
+  width: 100%;
+  height: 100%;
+}
+.header img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* 卡片 */
+.show-card-wrapper{
+  width: 40%;
+  height: 100%;
+  float: left;
+  position: relative;
+  margin-left: 20%;
+}
+.show-card{
+  background-color: #efefef;
+  height: 160px;
+  box-sizing: border-box;
+  border-left: 8px solid #444444;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.show-card p{
+  font-weight: bold;
+  line-height: 24px;
+}
+.show-card a{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-decoration:underline;
+}
+/* 卡片左侧内容 */
+.show-content-wrapper{
+  margin-left: 60%;
+  height: calc(100% - 100px);
+  padding: 80px 20px 20px 20px;
+}
+.show-content-wrapper h1{
+  font-weight: bold;
+  font-size: 16px;
+}
+.show-content-wrapper p{
+  margin-top: 10px;
+  line-height: 24px;
+  color: #999999;
+}
+/* 简介 */
+.brief{
+  padding-top: 165px;
+  height: calc(50% - 165px);
+}
+.brief h1{
+  margin-left: 20%;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  width: 20%;
+  float: left;
+}
+.brief .detail-image{
+  width: 20%;
+  float: left;
+}
+.brief .detail-image img{
+  width: 100%;
+}
+.brief .detail{
+  margin-left: 60%;
+  height: 270px;
+  padding: 0 20px 20px 20px;
+}
+.brief .detail p {
+  line-height: 24px;
+  color: #999999;
+}
+/* 描述 */
+.describe{
+  padding: 0 20% 0 20%;
+  width: 60%;
+}
+.describe p{
+  padding: 20px;
+  color: #999999;
+  line-height: 24px;
+}
+/* 产品 */
+.product{
+  padding-top: 80px;
+  height: calc(100% - 80px);
+  width: 100%;
+  display: flex;
+}
+.product-image-wrapper{
+  width: 20%;
+}
+.product img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* 产品列表 */
+.product-list{
+  padding: 0 40px 40px 40px;
+  width: calc(20% - 80px);
+}
+.product-list li{
+  font-weight: bold;
+  line-height: 32px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #999999;
+}
+.product-list-curr {
+  font-size: 20px !important;
+  color: #444444 !important;
+}
+.product-detail{
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+.product-detail-item{
+  height: calc(50% - 40px);
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+.product-detail p{
+  color: #999999;
+  width: 50%;
+  float: left;
+  line-height: 24px;
+}
+.product-detail-item img{
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  float: left;
+}
+/* 底部 */
+.bottom{
+  height: calc(100% - 80px) !important;
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+  background-image: url(../../assets/images/beijing.jpeg);
+  background-size:100% 100%;
+}
+.bottom ul{
+  position: relative;
+  top: 325px;
+  list-style-type:none;
+}
+.bottom p{
+  position: relative;
+  display: inline-block;
+  top: 425px;
+  color: #fff;
+  width: 700px;
+  line-height: 24px;
+}
+.bottom li{
+  color: #fff;
+  display:inline;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.bottom-category-curr{
+  font-size: 26px !important;
+  font-weight: bold;
+  opacity: 1 !important;
 }

@@ -7,6 +7,17 @@ var entryConfig = require('./src/config/entry-config.js');
 // 环境变量 dev / test / prod
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 
+// 获取html-webpack-plugin参数的方法 
+var getHtmlConfig = function(name){
+  return {
+      template    : './src/view/' + name + '.html',
+      filename    : 'view/' + name + '.html',
+      inject      : true,
+      hash        : true,
+      chunks      : ['common', name]
+  };
+};
+
 var config = {
   
   entry: entryConfig,
