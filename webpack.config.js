@@ -2,7 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var entryConfig = require('./src/config/entry-config.js');
 
 // 环境变量 dev / test / prod
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
@@ -20,7 +19,13 @@ var getHtmlConfig = function(name){
 
 var config = {
   
-  entry: entryConfig,
+  entry: {
+    'common':[
+      './src/common/request.js', 
+      './src/common/hogan.utils.js'
+    ],
+    'index':['./src/page/index/index.js']
+  },
 
   output: {
     path: path.resolve(__dirname, "dist"),

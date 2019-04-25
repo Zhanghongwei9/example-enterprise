@@ -1,0 +1,34 @@
+/* 上滑动画 */
+@keyframes up-slide {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -400px;
+  }
+}
+@keyframes down-slide {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0px;
+  }
+}
+/* 图片上滑 */
+@keyframes up-image-height {
+  from {
+    height: calc(100% - 120px);
+  }
+  to {
+    height: calc(0% - 120px);
+  }
+}
+@keyframes down-image-height {
+  from {
+    height: calc(0% - 120px);
+  }
+  to {
+    height: calc(100% - 120px);
+  }
+}
