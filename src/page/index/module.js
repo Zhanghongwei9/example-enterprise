@@ -2,7 +2,7 @@
  * @Author: ZhangHongwei
  * @Date: 2019-04-23 16:48:28
  * @Last Modified by: ZhangHongwei
- * @Last Modified time: 2019-04-25 14:23:24
+ * @Last Modified time: 2019-04-26 10:23:09
  */
 'use strict'
 
@@ -58,21 +58,22 @@ function lastPage() {
   // 锁定滚动条
   _scroll.prohibit();
   // 获取当前模块
-  let currModule = modules[currModuleIndex];
+  var currModule = modules[currModuleIndex];
   // 出场动画
   currModule.outAnimation(function() {
     // 显示上一个模块
     _transition.lastModule(function () {
       currModuleIndex--;
-      let currModule = modules[currModuleIndex];
+      var lastModule = modules[currModuleIndex];
       // 入场动画
-      currModule.enterAnimation(function() {
+      lastModule.enterAnimation(function() {
         // 重置滚动条位置
         _scroll.enable();
         reset();
+        currModule.completion()
       });
-    }, 0.5);
-  });
+    });
+  }, 0.5);
 }
 
 // 下一个模块
@@ -80,17 +81,19 @@ function nextPage() {
   // 锁定滚动条
   _scroll.prohibit();
   // 获取当前模块
-  let currModule = modules[currModuleIndex];
+  var currModule = modules[currModuleIndex];
   // 出场动画
   currModule.outAnimation(function() {
     // 显示下一个模块
     _transition.nextModule(function () {
+      // 执行回调函数
       currModuleIndex++;
-      currModule = modules[currModuleIndex];
-      currModule.enterAnimation(function() {
+      let nextModule = modules[currModuleIndex];
+      nextModule.enterAnimation(function() {
         _scroll.enable();
         // 重置滚动条位置
         reset();
+        currModule.completion()
       });
     });
   }, 0.5);

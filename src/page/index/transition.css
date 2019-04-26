@@ -15,6 +15,30 @@
     top: 0px;
   }
 }
+@keyframes left-slide {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes right-slide {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes bottom-up-slide{
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0px;
+  }
+}
 /* 图片上滑 */
 @keyframes up-image-height {
   from {

@@ -3,13 +3,6 @@
 <%= require('html-loader!./layout/header.html') %>
 
 <body>
-  <!-- 分割线 -->
-  <div class="dividing-line">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
   <!-- 菜单栏 -->
   <div class="menu menu-bar">
     <div class="item logo">
@@ -24,6 +17,13 @@
   </div>
   <!-- 显示窗口 -->
   <div class="content-window">
+    <!-- 分割线 -->
+    <div class="dividing-line">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="content-wrapper">
       <!-- 菜单栏 -->
       <div class="menu">
@@ -79,9 +79,9 @@
           族石竹族 属石头花属 种 圆锥石头花 命名者和年代 L.，1753
         </p>
       </div>
-      <div class="content-item product">
-        <div class="product-image-wrapper">
-          <img src="${require('../assets/images/product-index.jpg')}" alt="">
+      <div class="content-item product-item">
+        <div class="product-image">
+          <img class="product-image-left" src="${require('../assets/images/product-index.jpg')}" alt="">
         </div>
         <div class="product-list">
           <ul>

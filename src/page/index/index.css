@@ -53,7 +53,7 @@ html,body{
   height: 60px;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
 }
 .menu .item{
   width: 20%;
@@ -188,6 +188,7 @@ html,body{
   width: 20%;
   height: 100%;
 }
+/* 图片遮罩 */
 .brief-image-mask::after{
   width: 20%;
   height: calc(100% - 120px);
@@ -195,7 +196,6 @@ html,body{
   display: inline-block;
   background-color: #fff;
   position: absolute;
-  animation: down-image-height 1s forwards;
   top: 60px;
 }
 .brief-image-transition::after{
@@ -229,21 +229,31 @@ html,body{
   padding: 20px 20px 20px calc(20% + 20px);
   color: #999999;
   position: relative;
+  bottom: -100%;
 }
 .describe-item p{
   line-height: 24px;
 }
 /* 产品 */
-.product{
+.product-item{
   padding-top: 60px;
   height: calc(100% - 60px);
   width: 100%;
+  position: relative;
   display: flex;
 }
-.product-image-wrapper{
+.product-image{
   width: 20%;
+  height: 100%;
+  position: relative;
 }
-.product img{
+.product-image-left{
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+}
+.product-item img{
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -261,6 +271,10 @@ html,body{
   text-align: center;
   color: #999999;
 }
+.product-list li:hover{
+  color: azure !important;
+  /* background: #383E43; */
+}
 .product-list-curr {
   font-size: 20px !important;
   color: #444444 !important;
@@ -269,6 +283,7 @@ html,body{
   width: 60%;
   height: 100%;
   position: relative;
+  right: -100%;
 }
 .product-detail-item{
   height: calc(50% - 40px);

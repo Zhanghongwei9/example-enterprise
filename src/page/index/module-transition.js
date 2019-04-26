@@ -2,7 +2,7 @@
  * @Author: ZhangHongwei
  * @Date: 2019-04-22 16:59:04
  * @Last Modified by: ZhangHongwei
- * @Last Modified time: 2019-04-25 14:27:36
+ * @Last Modified time: 2019-04-25 23:18:31
  */
 'use strict'
 
@@ -50,32 +50,43 @@ var modules = [
       _animate.animateCss($('.header'), 'up-slide', runSecond, 0, 'forwards');
       // 动画执行完成后，回调
       setTimeout(backFunction, runSecond * (advance || 1));
-    }
+    },
+    completion: function() {}
   },
   {
     className: '.brief-wrapper',
     enterAnimation: function(backFunction, advance) {
-      $('.brief-image').removeClass('brief-image-mask')
-        .addClass('brief-image-transition');
+      $('.describe-item').css('visibility','visible');
+      $('.brief-image').removeClass('brief-image-mask').addClass('brief-image-transition');
+      _animate.animateCss($('.describe-item'), 'bottom-up-slide', runSecond, runSecond * 0.3, 'forwards');
+      // 动画执行完成后，回调
+      let runTime = runSecond + (runSecond * 0.3);
+      setTimeout(backFunction, runTime * (advance || 1));
+    },
+    outAnimation: function(backFunction, advance) {
       // 动画执行完成后，回调
       setTimeout(backFunction, runSecond * (advance || 1));
     },
-    outAnimation: function(backFunction, advance) {
-      $('.brief-image').removeClass('brief-image-transition')
-      .addClass('brief-image-mask');
-      // 动画执行完成后，回调
-      setTimeout(backFunction, 0);
+    completion: function() {
+      $('.brief-image').removeClass('brief-image-transition').addClass('brief-image-mask');
+      $('.describe-item').css('visibility','hidden');
+      _animate.removeCss([$('.describe-item')]);
     }
   },
   {
     className: '.product-wrapper',
     enterAnimation: function(backFunction) {
+      _animate.animateCss($('.product-image-left'), 'left-slide', runSecond, 0, 'forwards');
+      _animate.animateCss($('.product-detail'), 'right-slide', runSecond, 0, 'forwards');
       // 动画执行完成后，回调
-      setTimeout(backFunction, 0);
+      setTimeout(backFunction, runSecond);
     },
     outAnimation: function(backFunction) {
       // 动画执行完成后，回调
       setTimeout(backFunction, 0);
+    },
+    completion: function() {
+      _animate.removeCss([$('.product-image-left'),$('.product-detail')]);
     }
   },
   {
@@ -87,7 +98,8 @@ var modules = [
     outAnimation: function(backFunction) {
       // 动画执行完成后，回调
       setTimeout(backFunction, 0);
-    }
+    },
+    completion: function() {}
   }
 ];
 
