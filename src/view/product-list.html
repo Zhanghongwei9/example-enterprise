@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%= require('html-loader!./share/header.html') %>
+<body>
+  <!-- 菜单栏 -->
+  <%= require('html-loader!./share/menu.html') %>
+  <!-- 筛选 -->
+  <div class="screen-wapper">
+    <ul>
+      <li>全部</li>
+      <li class="screen-category">
+        类型
+        <ul class="category-menu">
+          <li>完美</li>
+          <li>吉普赛</li>
+          <li>钻石</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- 列表 -->
+  <div class="list-inner">
+    <div class="list-content">
+    </div>
+  </div>
+  <!-- 无限加载 -->
+  <div class="loading">
+    <div class="loading-text">数据加载中....</div>
+  </div>
+</body>
+
+</html>

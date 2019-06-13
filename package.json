@@ -2,10 +2,10 @@
   "name": "example-webpack-1.x-framework",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "WEBPACK_ENV=prod webpack",
-    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8080"
+    "dev": "cross-env NODE_ENV=dev node app"
   },
   "repository": {
     "type": "git",
@@ -14,17 +14,25 @@
   "author": "zhanghongwei",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^3.0.1",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
+    "mockjs": "^1.0.1-beta3",
     "style-loader": "^0.23.1",
+    "supervisor": "^0.12.0",
     "url-loader": "^0.5.8",
     "webpack": "^1.15.0",
-    "webpack-dev-server": "^1.16.5"
+    "webpack-dev-server": "^2.10.0",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
-    "hogan": "^1.0.2"
+    "express": "^4.17.0",
+    "hogan": "^1.0.2",
+    "marked": "^0.6.2"
   }
 }

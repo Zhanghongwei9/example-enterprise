@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<%= require('html-loader!./share/header.html') %>
+
+<body>
+  <!-- 菜单栏 -->
+  <%= require('html-loader!./share/menu.html') %>
+  <!-- 切换按钮 -->
+  <div class="cut-menu">
+    <ul>
+      <li class="cut-menu-up"></li>
+      <li class="cut-menu-down"></li>
+    </ul>
+  </div>
+  <!-- 显示窗口 -->
+  <div class="content-window">
+    <!-- 分割线 -->
+    <div class="dividing-line">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="content-wrapper">
+      <!-- 菜单栏 -->
+      <div class="content-menu">
+        <div class="content-logo">
+          FLOWER HUT.
+        </div>
+        <div class="content-link">
+          <a href="javascript:void(0);">联系我们</a>
+        </div>
+      </div>
+      <div class="content-item header-item">
+        <div class="header">
+          <img src="${require('../assets/images/index.jpg')}">
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="show-conten-item">
+          <div class="show-content">
+            <h1></h1>
+          </div>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="show-card-item">
+          <div class="show-card">
+            <p></p>
+            <a href="javascript:void(0);">进一步了解</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-item brief-item">
+        <div class="brief-title">
+          <h1>满天星花语</h1>
+        </div>
+        <div class="brief-image brief-image-mask">
+          <img src="${require('../assets/images/detail.jpeg')}" alt="">
+        </div>
+        <div class="brief-detail">
+          <p></p>
+        </div>
+      </div>
+      <div class="content-item describe-item">
+      </div>
+      <div class="content-item product-item">
+        <div class="product-image">
+          <img class="product-image-left" src="${require('../assets/images/product-index.jpg')}" alt="">
+        </div>
+        <div class="product-list">
+          <ul>
+          </ul>
+        </div>
+        <div class="product-detail">
+          <div class="product-detail-item"></div>
+        </div>
+      </div>
+      <div class="content-item bottom-item">
+        <ul class="bottom-category">
+        </ul>
+        <p class="bottom-content"></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

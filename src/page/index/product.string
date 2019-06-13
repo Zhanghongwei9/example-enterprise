@@ -1,0 +1,11 @@
+<ul>
+  {{#list}}
+  <li class="product-item">
+    <img src="{{imageUrl}}">
+    <div class="product-item-operation">
+      <span></span>
+      <span></span>
+    </div>
+  </li>
+  {{/list}}
+</ul>

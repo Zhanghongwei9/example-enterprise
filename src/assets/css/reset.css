@@ -2,7 +2,7 @@
  * @Author: ZhangHongwei
  * @Date: 2019-04-14 17:50:41
  * @Last Modified by: ZhangHongwei
- * @Last Modified time: 2019-04-15 21:54:15
+ * @Last Modified time: 2019-05-07 13:21:17
  */
 
 html * {
@@ -12,7 +12,7 @@ html * {
 }
 
 body {
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Microsoft YaHei', 'Helvetica', 'Simsun';
   background: #f7f7f8;
   color: #383E43;

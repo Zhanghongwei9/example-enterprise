@@ -1,0 +1,119 @@
+/* 上滑动画 */
+@keyframes up-slide {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -400px;
+  }
+}
+@keyframes down-slide {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes left-slide {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes right-slide {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes bottom-up-slide{
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+/* 图片上滑 */
+@keyframes up-image-height {
+  from {
+    height: calc(100% - 120px);
+  }
+  to {
+    height: calc(0% - 120px);
+  }
+}
+@keyframes down-image-height {
+  from {
+    height: calc(0% - 120px);
+  }
+  to {
+    height: calc(100% - 120px);
+  }
+}
+@keyframes product-curr-line{
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+/* 底部菜单动画 */
+@keyframes menu-last-out{
+  from{
+    opacity: 0.8;
+    left: calc(50% - 200px);
+  }
+  to {
+    opacity: 0;
+    left: calc(50% - 300px);
+  }
+}
+@keyframes menu-curr-out{
+  from{
+    left: calc(50% - 72px);
+    top: 0;
+    font-size: 36px;
+  }
+  to {
+    left: calc(50% - 200px);
+    top: calc(50% - 18px);
+    font-size: 24px;
+  }
+}
+@keyframes menu-next-enter{
+  from{
+    left: calc(50% + 100px);
+    top: calc(50% - 18px);
+    font-size: 24px;
+  }
+  to {
+    left: calc(50% - 72px);
+    top: 0px;
+    font-size: 36px;
+  }
+}
+@keyframes menu-new-enter{
+  from{
+    left: calc(50% + 200px);
+    opacity: 0;
+  }
+  to {
+    left: calc(50% + 100px);
+    opacity: 1;
+  }
+}
+@keyframes menu-curr-line{
+  from{
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

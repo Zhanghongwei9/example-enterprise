@@ -1,0 +1,18 @@
+<ol class="list-group">
+  {{#list}}
+    <li class="list-group-team">
+        <div class="list-product">
+          <!-- 图片 -->
+          <div class="list-img">
+            <picture>
+              <img src="{{imageUrl}}">
+            </picture>
+          </div>
+          <!-- 标题 -->
+          <div class="list-product-name">
+            <span>{{name}}</span>
+          </div>
+        </div>
+      </li>
+  {{/list}}
+</ol>
