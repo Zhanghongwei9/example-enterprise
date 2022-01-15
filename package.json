@@ -33,6 +33,6 @@
   "dependencies": {
     "express": "^4.17.0",
     "hogan": "^1.0.2",
-    "marked": "^0.6.2"
+    "marked": "^4.0.10"
   }
 }
